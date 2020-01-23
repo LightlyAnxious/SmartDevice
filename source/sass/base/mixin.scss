@@ -1,0 +1,41 @@
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin button-reset {
+  padding: 0;
+  border: none;
+  box-sizing: content-box;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+@mixin button-style {
+  display: inline-block;
+  box-sizing: border-box;
+  border-radius: 5px;
+
+  font-family: "Roboto-Condensed", "Helvetica CY", sans-serif;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+@mixin roboto-r {
+  font-family: "Roboto-Condensed", "Helvetica CY", sans-serif;
+  font-weight: normal;
+}
+
+@mixin roboto-b {
+  font-family: "Roboto-Condensed", "Helvetica CY", sans-serif;
+  font-weight: bold;
+}
+
+@mixin pt-mono-r {
+  font-family: "Pt-Mono", "Tahoma", sans-serif;
+  font-weight: normal;
+}

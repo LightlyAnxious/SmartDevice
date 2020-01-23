@@ -1,0 +1,102 @@
+.page-header {
+  background: url("../img/banner_bg.png") no-repeat, url("../img/banner_triangles.svg") no-repeat, url("../img/board.png") no-repeat;
+  background-position: 0 0, center top, 85.5% 70%;
+  background-size: cover, auto, 705px 515px;
+  background-color: $dark-navy-color;
+}
+
+.page-header__wrapper {
+  width: 74%;
+  padding: 0 13% 0 13%;
+  margin: 0 auto;
+  max-width: 1412px;
+}
+
+.page-header__promo {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  & h2 {
+    @include roboto-b;
+
+    margin: 0;
+    margin-top: 195px;
+    font-size: 80px;
+    line-height: 94px;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+
+  & p {
+    position: relative;
+
+    width: 611px;
+    margin: 27px auto 25px 95px;
+
+    font-size: 22px;
+    line-height: 34px;
+    color: #ffffff;
+    text-transform: lowercase;
+
+    &::before {
+      position: absolute;
+      content: "";
+      z-index: 3;
+      top: 10px;
+      left: - 95px;
+
+      width: 66px;
+      height: 2px;
+
+      color: #ffffff;
+    }
+  }
+}
+
+.page-header__link {
+  @include button-style;
+
+  align-self: flex-start;
+  border: 1px solid $blue-color;
+  padding: 17px 45px 14px 45px;
+  margin: 18px auto 47px 94px;
+
+  color: #ffffff;
+
+  background-color: $blue-color;
+}
+
+.page-header__scroll {
+  position: relative;
+
+  width: 16px;
+  height: 93px;
+  align-self: flex-start;
+  margin: 47px auto 92px 0;
+
+  padding: 0;
+
+  font-size: 0;
+
+  & a {
+    position: absolute;
+    content: "Скролл вниз";
+    bottom: 20%;
+    left: -30%;
+    z-index: 3;
+
+    width: 93px;
+    height: 16px;
+    font-size: 14px;
+    line-height: 16px;
+
+    color: #ffffff;
+
+    opacity: 0.5;
+
+    // transform-origin: left bottom;
+    transform: rotate(-90deg);
+  }
+}
