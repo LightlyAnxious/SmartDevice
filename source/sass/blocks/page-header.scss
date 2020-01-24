@@ -7,9 +7,9 @@
 
 .page-header__wrapper {
   width: 74%;
-  padding: 0 13% 0 13%;
+  padding: 0 13.3% 0 13.2%;
   margin: 0 auto;
-  max-width: 1412px;
+  max-width: 1411px;
 }
 
 .page-header__promo {
@@ -47,6 +47,7 @@
       top: 10px;
       left: - 95px;
 
+      display: block;
       width: 66px;
       height: 2px;
 
@@ -84,9 +85,10 @@
     position: absolute;
     content: "Скролл вниз";
     bottom: 20%;
-    left: -30%;
+    left: 0;
     z-index: 3;
 
+    display: block;
     width: 93px;
     height: 16px;
     font-size: 14px;
@@ -96,7 +98,7 @@
 
     opacity: 0.5;
 
-    // transform-origin: left bottom;
+    transform-origin: left bottom;
     transform: rotate(-90deg);
   }
 }
