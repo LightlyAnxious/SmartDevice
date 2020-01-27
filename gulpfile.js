@@ -18,28 +18,31 @@ var del = require("del");
 
 gulp.task("css", function () {
   return gulp.src("source/sass/style.scss")
-    .pipe(plumber())
     .pipe(sourcemap.init())
+    .pipe(plumber())
     .pipe(sass())
     // .pipe(postcss([ autoprefixer() ]))
     // .pipe(csso())
     // .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("source/css"))
-    .pipe(server.stream());
+    .pipe(server.stream({ match: 'source/**/*.css' } ));
 });
 
 gulp.task("server", function () {
   server.init({
     server: "source/",
-    injectChanges: true,
+    // injectChanges: true,
+    port: 8080,
     notify: false,
     open: true,
     cors: true,
-    ui: false
+    // ui: false
   });
 
-  gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("css"));
+  gulp.watch("source/sass/**/*.{scss,sass}", gulp.parallel("css"));
+  // gulp.watch("source/sass/**/*.{sass,scss}").on("change", server.reload)
+  // gulp.watch("source/*.html").on("change", server.reload)
   // gulp.watch("source/img/icon-*.svg", gulp.series("sprite", "html", "refresh"));
   // gulp.watch("source/*.html", gulp.series("html", "refresh"));
 });

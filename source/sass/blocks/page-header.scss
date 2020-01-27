@@ -1,17 +1,15 @@
 .page-header {
-  // background: url("../img/banner_bg.png") no-repeat, url("../img/banner_triangles.svg") no-repeat, url("../img/board.png") no-repeat;
-  // background-position: 0 0, center top, 85.5% 70%;
-  // background-size: cover, auto, 705px 515px;
-  // background-color: $dark-navy-color;
-  background-image: url("../img/header_bg.jpg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  background-size: cover;
+  flex-shrink: 0;
+
+  background: url("../img/banner_bg.png") no-repeat, url("../img/banner_triangles.svg") no-repeat, url("../img/board.png") no-repeat;
+  background-position: 0 0, 50% 0, 85.5% 71%;
+  background-size: cover, auto, 705px 515px;
+  background-color: $dark-navy-color;
 }
 
 .page-header__wrapper {
-  width: 74%;
-  padding: 0 13% 0 13%;
+  width: 73.8%;
+  padding: 0 13.2% 0 13%;
   margin: 0 auto;
   max-width: 1411px;
 }
@@ -48,19 +46,18 @@
       position: absolute;
       content: "";
       z-index: 3;
-      top: 10px;
+      top: 18px;
       left: - 95px;
 
-      display: block;
       width: 66px;
       height: 2px;
 
-      color: #ffffff;
+      background-color: #ffffff;
     }
   }
 }
 
-.page-header__link {
+.page-header__consultation-link {
   @include button-style;
 
   align-self: flex-start;
@@ -71,53 +68,120 @@
   color: #ffffff;
 
   background-color: $blue-color;
-}
 
-.page-header__scroll {
-  position: relative;
-
-  width: 16px;
-  height: 93px;
-  align-self: flex-start;
-  margin: 47px auto 92px 0;
-
-  padding: 0;
-
-  font-size: 0;
-
-  & a {
-    position: absolute;
-    content: "Скролл вниз";
-    bottom: 20%;
-    left: 0;
-    z-index: 3;
-
-    display: block;
-    width: 93px;
-    height: 16px;
-    font-size: 14px;
-    line-height: 16px;
-
-    color: #ffffff;
-
-    opacity: 0.5;
-
-    transform-origin: left bottom;
-    transform: rotate(-90deg);
+  &--mobile {
+    display: none;
   }
 }
 
-// @media (max-width: 1023px) {
-//   .page-header {
-//     // background: url("../img/banner_tablet_bg.png") no-repeat, url("../img/banner_triangles.svg") no-repeat, url("../img/board_tablet.png") no-repeat;
-//     // background-position: 0 0, center top, 85.5% 70%;
-//     // background-size: cover, auto, 465px 340px;
-//     // background-color: $dark-navy-color;
-//   }
+.page-header__scroll {
+  width: 94px;
+  height: 17px;
+  align-self: flex-start;
+  margin: 140px 0 74px 0;
+  padding: 0;
 
-//   .page-header__wrapper {
-//     width: 93%;
-//     padding: 0 3.5% 0 3.5%;
-//     margin: 0 auto;
-//   }
-// }
+  font-size: 14px;
+  line-height: 16px;
+
+  color: #ffffff;
+  opacity: 0.5;
+
+  transform-origin: left top;
+  transform: rotate(-90deg);
+}
+
+@media (max-width: $tablet-width) {
+  .page-header {
+    background: url("../img/banner_tablet_bg.png") no-repeat, url("../img/banner_triangles_tablet.svg") no-repeat, url("../img/board_tablet.png") no-repeat;
+    background-position: 0 0, 100% 27%, 100% 33%;
+    background-size: cover, auto, auto;
+    background-color: $dark-navy-color;
+  }
+
+  .page-header__wrapper {
+    width: 93.6%;
+    padding: 0 3.2% 0 3.2%;
+    margin: 0 auto;
+  }
+
+  .page-header__promo {
+    & h2 {
+      width: 42.36%;
+      margin: 96px auto 16px 63px;
+
+      font-size: 60px;
+      line-height: 70px;
+    }
+
+    & p {
+      width: 49.44%;
+      margin: 15px auto 16px 115px;
+
+      font-size: 18px;
+      line-height: 156.8%;
+
+      &::before {
+        top: 14px;
+        left: -50px;
+        width: 33px;
+      }
+    }
+  }
+
+  .page-header__consultation-link {
+    margin: 37px 0 162px 115px;
+    padding: 2.36% 4.4% 2.2% 4.4%;
+  }
+
+  .page-header__scroll {
+    display: none;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .page-header {
+    background: url("../img/banner_mobile_bg.png") no-repeat, url("../img/banner_triangles_mobile.svg") no-repeat, url("../img/board_mobile.png") no-repeat;
+    background-position: 0 0, 100% 60%, 100% 21.5%;
+    background-size: cover, auto, auto;
+    background-color: $dark-navy-color;
+  }
+
+  .page-header__wrapper {
+    width: 90%;
+    padding: 0 5%;
+    margin: 0 auto;
+  }
+
+  .page-header__promo {
+    & h2 {
+      width: 42.36%;
+      margin: 73.95% auto 4.51% 0;
+
+      font-size: 40px;
+      line-height: 47px;
+      letter-spacing: 0.07em;
+    }
+
+    & p {
+      width: 77%;
+      margin: 5.7% auto 5% 16.66%;
+
+      font-size: 16px;
+    }
+  }
+
+  .page-header__consultation-link {
+    width: 100%;
+    margin: 9.5% 0 23.95% 0;
+    padding: 6% 11.11% 5% 10.41%;
+
+    &--desktop {
+      display: none;
+    }
+
+    &--mobile {
+      display: inline-block;
+    }
+  }
+}

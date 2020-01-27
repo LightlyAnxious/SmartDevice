@@ -1,0 +1,31 @@
+.background-container {
+  &--white {
+    background: url("../img/advantages_triangles.svg") no-repeat;
+    background-position: 0 0;
+    background-size: auto;
+  }
+
+  &--blue {
+    background: url("../img/form_bg.svg") no-repeat, url("../img/form_triangles.svg") no-repeat, url("../img/paper_airplane.png") no-repeat;
+    background-position: 100% 0, 15% 50%, 25% 41%;
+    background-size: auto, auto, 511px 288px;
+    background-color: $blue-color;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .background-container {
+    &--white {
+      background: url("../img/advantages_triangles_tablet.svg") no-repeat;
+      background-position: 0 0;
+      background-size: auto;
+    }
+
+    &--blue {
+      background: url("../img/form_bg.svg") no-repeat, url("../img/form_triangles.svg") no-repeat;
+      background-position: 100% 0, 15% 50%;
+      background-size: auto, auto;
+      background-color: $blue-color;
+    }
+  }
+}

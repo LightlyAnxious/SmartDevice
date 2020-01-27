@@ -1,0 +1,262 @@
+.contact-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  width: 60.937%;
+  margin: 0 auto;
+  padding: 0 2%;
+
+  color: #ffffff;
+}
+
+.contact-form__wrapper {
+  width: 570px;
+  margin-bottom: 113px;
+
+  & h2 {
+    @include roboto-r;
+
+    margin-top: 92px;
+    margin-bottom: 0;
+    margin-left: -3px;
+    font-size: 36px;
+    line-height: 51px;
+  }
+
+  & p {
+    width: 100%;
+    margin: 9px auto 49px 0;
+  }
+
+  & input[type="text"],
+  & input[type="tel"] {
+    width: 270px;
+    min-height: 50px;
+    margin-bottom: 40px;
+    border: none;
+
+    line-height: 22px;
+    color: #ffffff;
+
+    background-color: #19baff;
+
+    &::placeholder {
+      padding: 14px 0 14px 17px;
+
+      color: #ffffff;
+    }
+  }
+
+  & input[type="text"] {
+    margin-right: 16px;
+  }
+
+  & textarea {
+    width: 100%;
+    border: none;
+    resize: none;
+    min-height: 154px;
+    margin-bottom: 36px;
+    padding: 0;
+
+    background-color: #19baff;
+
+    &::placeholder {
+      padding: 13px 16px;
+
+      color: #ffffff;
+    }
+  }
+
+  & label {
+    position: relative;
+
+    width: 230px;
+    min-width: 194px;
+
+    font-size: 14px;
+    line-height: 16px;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.5;
+    }
+
+    &:active {
+      opacity: 0.2;
+    }
+  }
+}
+
+.user-consent {
+  & + .contact-form__label {
+    &::before {
+      position: absolute;
+      top: 3px;
+      left: -31px;
+      content: "";
+      z-index: 3;
+
+      width: 13px;
+      height: 13px;
+      border: 1px solid #ffffff;
+
+      background-color: $blue-color;
+      cursor: pointer;
+    }
+
+    &:hover::before {
+      opacity: 0.5;
+    }
+
+    &:active {
+      opacity: 0.2;
+    }
+  }
+}
+
+.user-consent:checked {
+  & + .contact-form__label {
+    &::before {
+      background: 2px 4px url("../img/check.svg") no-repeat;
+    }
+  }
+}
+
+.contact-form__controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contact-form__button {
+  @include button-reset;
+  @include button-style;
+
+  padding: 14px 80px 14px 80px;
+  border: 1px solid #ffffff;
+
+  font-size: 14px;
+  line-height: 16px;
+}
+
+@media (max-width: $tablet-width) {
+  .contact-form {
+    width: 76.75%;
+    padding: 0 11.25% 0 12%;
+  }
+
+  .contact-form__wrapper {
+    width: 100%;
+    margin-bottom: 103px;
+
+    & h2 {
+      font-size: 32px;
+      line-height: 140.62%;
+      margin-top: 81px;
+    }
+
+    & p {
+      margin-top: 16px;
+      margin-bottom: 54px;
+    }
+
+    & input[type="text"],
+    & input[type="tel"] {
+      width: 47.37%;
+      padding: 0;
+      margin-bottom: 43px;
+    }
+
+    & input[type="text"] {
+      margin-right: 3.6%;
+    }
+
+    & textarea {
+      min-height: 160px;
+      margin-bottom: 39px;
+    }
+  }
+
+  .user-consent {
+    & + .contact-form__label {
+      &::before {
+        left: -33px;
+      }
+    }
+  }
+
+  .contact-form__controls {
+    & label {
+      width: 40.27%;
+    }
+  }
+
+  .contact-form__button {
+    padding-left: 14.38%;
+    padding-right: 14.38%;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .contact-form {
+    width: 90.625%;
+    padding: 0 1.875%;
+  }
+
+  .contact-form__wrapper {
+    margin: 0;
+
+    & h2 {
+      width: 84.48%;
+      margin-top: 30px;
+      margin-left: 3px;
+
+      font-size: 28px;
+    }
+
+    & p {
+      width: 92.75%;
+      margin-top: 13px;
+      margin-bottom: 25px;
+    }
+
+    & input[type="text"],
+    & input[type="tel"] {
+      width: 100%;
+      margin-bottom: 32px;
+      margin-right: 0;
+    }
+
+    & textarea {
+      min-height: 104px;
+      margin-bottom: 25px;
+    }
+
+    & label {
+      width: 82.068%;
+      margin-left: 11.37%;
+      margin-bottom: 41px;
+    }
+  }
+
+  .contact-form__controls {
+    flex-direction: column;
+    justify-content: unset;
+    align-items: unset;
+  }
+
+  .contact-form__button {
+    width: 100%;
+    margin-bottom: 31px;
+  }
+
+  .user-consent {
+    & + .contact-form__label {
+      &::before {
+        left: -32px;
+        top: 1px;
+      }
+    }
+  }
+}
