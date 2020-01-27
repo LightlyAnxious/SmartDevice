@@ -41,8 +41,8 @@ gulp.task("server", function () {
   });
 
   gulp.watch("source/sass/**/*.{scss,sass}", gulp.parallel("css"));
-  // gulp.watch("source/sass/**/*.{sass,scss}").on("change", server.reload)
-  // gulp.watch("source/*.html").on("change", server.reload)
+  gulp.watch("source/sass/**/*.{sass,scss}").on("change", server.reload)
+  gulp.watch("source/*.html").on("change", server.reload)
   // gulp.watch("source/img/icon-*.svg", gulp.series("sprite", "html", "refresh"));
   // gulp.watch("source/*.html", gulp.series("html", "refresh"));
 });
