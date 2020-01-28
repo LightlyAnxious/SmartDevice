@@ -340,9 +340,11 @@
         </ul>
       </div>
     <nav class="page-footer__nav accordion">
-      <h3>Разделы сайта</h3>
-      <button class="accordion__toggle"></button>
-      <div class="page-footer__sections">
+      <div class="page-footer__controls">
+        <h3>Разделы сайта</h3>
+        <button class="accordion__toggle"></button>
+      </div>
+      <div class="page-footer__sections accordion__menu">
         <p>
           <a href="#" aria-label="О компании">
             О компании
@@ -370,10 +372,12 @@
         </p>
       </div>
     </nav>
-    <section class="page-footer__contacts accordion">
-      <h3>Наш офис</h3>
-      <button class="accordion__toggle"></button>
-      <address class="page-footer__address">
+    <section class="page-footer__office accordion">
+      <div class="page-footer__controls">
+        <h3>Наш офис</h3>
+        <button class="accordion__toggle"></button>
+      </div>
+      <address class="page-footer__address accordion__menu">
         <a href="https://goo.gl/maps/nXKvasK82eq1x8EEA" aria-label="Наш адрес">г. Мытищи, Олимпийский проспект, д.10</a>
         <a href="tel:+74955894050" aria-label="Наш телефон">+7 (495) 589-40-50</a>
         <a href="tel:+79250038767" aria-label="Наш телефон">+7 (925) 003-87-67</a>
@@ -382,7 +386,7 @@
     </section>
     </div>
     <div class="page-footer__bottom">
-      <div class="page-footer__container">
+      <div class="page-footer__container page-footer__container--left">
         <p class="page-footer__copyright page-footer__copyright--rights">
           <a href="#" aria-label="Все права защищены">Все права защищены</a>
         </p>
@@ -390,7 +394,7 @@
           <a href="#" aria-label="1999-2018 SD Service Devices">1999-2018 SD Service Devices</a>
         </p>
       </div>
-      <div class="page-footer__container">
+      <div class="page-footer__container page-footer__container--right">
         <p class="page-footer__copyright page-footer__copyright--privacy">
           <a href="#" aria-label="Условия конфиденциальности">Условия конфиденциальности</a>
         </p>
@@ -401,309 +405,5 @@
     </div>
   </footer>
 </body>
+<script src="js/accordion.js"></script>
 </html>
-
-.page-footer {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  flex-shrink: 0;
-  width: 73.8%;
-  padding: 0 13.2% 0 13%;
-  margin: 0 auto;
-  max-width: 1411px;
-
-  color: $dark-navy-color;
-}
-
-.page-footer__top {
-  position: relative;
-
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
-  min-height: 264px;
-
-  &::before {
-    position: absolute;
-    content: "";
-    top: 100%;
-    left: -13%;
-
-    width: 100vw;
-    height: 1px;
-
-    background-color: $dark-navy;
-
-    opacity: 0.2;
-  }
-}
-
-.page-footer__social {
-  width: 21.95%;
-
-  & p {
-    display: none;
-  }
-}
-
-.page-footer__logo {
-  margin: 65px 0 47px 0;
-}
-
-.page-footer__list {
-  @include list-reset;
-
-  width: 133px;
-  margin-bottom: 61px;
-}
-
-.page-footer__icon {
-  display: inline-block;
-  margin-right: 6px;
-  width: 27px;
-  height: 27px;
-
-  &:last-of-type {
-    margin-right: 0;
-  }
-
-  & a {
-    display: block;
-    width: 100%;
-    height: 100%;
-  }
-}
-
-.page-footer__nav {
-  width: 38.45%;
-
-  & h3 {
-    @include roboto-r;
-
-    margin-top: 65px;
-    margin-bottom: 10px;
-
-    font-size: 15px;
-    line-height: 16px;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-  }
-
-  & button {
-    display: none;
-  }
-}
-
-.page-footer__sections {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-
-  & p {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 0;
-    width: 43.5%;
-  }
-
-  & a {
-    align-self: flex-start;
-
-    color: $dark-navy-color;
-
-    font-size: 15px;
-    line-height: 25px;
-
-    opacity: 0.5;
-  }
-}
-
-.page-footer__contacts {
-  width: 23.72%;
-
-  & button {
-    display: none;
-  }
-
-  & h3 {
-    @include roboto-r;
-
-    margin: 65px 0 26px 5px;
-    font-size: 15px;
-    line-height: 16px;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-  }
-}
-
-.page-footer__address {
-  display: flex;
-  flex-direction: column;
-
-  & a {
-    @include pt-mono-r;
-
-    width: 100%;
-
-    font-size: 15px;
-    font-style: normal;
-    line-height: 25px;
-    color: $dark-navy-color;
-
-    opacity: 0.5;
-  }
-}
-
-.page-footer__bottom {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  font-size: 13px;
-  line-height: 24px;
-}
-
-.page-footer__container {
-  &--left {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 32.36%;
-  }
-
-  &--right {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 57.57%;
-  }
-}
-
-.page-footer__copyright {
-  &--top {
-    display: none;
-  }
-
-  & a {
-    display: inline-block;
-    vertical-align: middle;
-    margin: 14px 0;
-    color: $dark-navy-color;
-
-    opacity: 0.5;
-  }
-}
-
-@media (max-width: $tablet-width) {
-  .page-footer {
-    width: 93.5%;
-    margin: 0 auto;
-    padding: 0 3.25%;
-  }
-
-  .page-footer__top {
-    margin-bottom: 36px;
-
-    &::before {
-      top: 100%;
-      left: -3.472%;
-    }
-  }
-
-  .page-footer__social {
-    position: relative;
-
-    width: 100%;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-
-    &::before {
-      position: absolute;
-      content: "";
-      z-index: 3;
-      top: 100%;
-      left: -3.472%;
-
-      width: 100vw;
-      height: 1px;
-
-      background-color: $dark-navy-color;
-
-      opacity: 0.2;
-    }
-  }
-
-  .page-footer__list {
-    width: 15.6%;
-    margin: 30px 0 34px 0;
-  }
-
-  .page-footer__logo {
-    width: 216px;
-    margin: 20px 0 25px 0;
-  }
-
-  .page-footer__nav {
-    width: 34.46%;
-
-    & h3 {
-      margin: 38px 0 25px 0;
-    }
-  }
-
-  .page-footer__sections {
-    flex-direction: column;
-
-    & p {
-      width: 100%;
-      margin: 0;
-
-      line-height: 25px;
-    }
-  }
-
-  .page-footer__contacts {
-    width: 48%;
-
-    & h3 {
-      margin: 38px 0 25px 0;
-    }
-  }
-
-  .page-footer__bottom {
-    min-height: 69px;
-    justify-content: space-between;
-  }
-
-  .page-footer__copyright {
-    margin-right: 0;
-
-    &--top {
-      width: 248px;
-      display: block;
-      margin: 35px 0 37px 0;
-
-      font-size: 13px;
-      line-height: 24px;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-
-      & a {
-        margin: 0 0 0 14px;
-      }
-    }
-
-    &--rights {
-      display: none;
-    }
-
-    &--trademark {
-      display: none;
-    }
-  }
-}

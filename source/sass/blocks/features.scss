@@ -207,15 +207,18 @@
     }
 
     &--manufacture {
-      background: 0 0 url("../img/feature_1_mobile.png");
+      background: 0 0 url("../img/feature_1_mobile.png") no-repeat;
+      background-size: cover;
     }
 
     &--install {
-      background: 0 0 url("../img/feature_2_mobile.png");
+      background: 0 0 url("../img/feature_2_mobile.png") no-repeat;
+      background-size: cover;
     }
 
     &--parts {
-      background: 0 0 url("../img/feature_3_mobile.png");
+      background: 0 0 url("../img/feature_3_mobile.png") no-repeat;
+      background-size: cover;
     }
   }
 }

@@ -19,8 +19,8 @@ var del = require("del");
 gulp.task("css", function () {
   return gulp.src("source/sass/style.scss")
     .pipe(sourcemap.init())
-    .pipe(plumber())
-    .pipe(sass())
+    // .pipe(plumber())
+    .pipe(sass().on('error', sass.logError))
     // .pipe(postcss([ autoprefixer() ]))
     // .pipe(csso())
     // .pipe(rename("style.min.css"))
