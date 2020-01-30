@@ -61,6 +61,8 @@
 
     background-color: #19baff;
 
+    color: #ffffff;
+
     &::placeholder {
       padding: 13px 16px;
 
@@ -138,6 +140,20 @@
 
   font-size: 14px;
   line-height: 16px;
+
+  &:hover {
+    color: $blue-color;
+
+    background-color: #ffffff;
+  }
+
+  &:active {
+    color: $blue-color;
+
+    background-color: #ffffff;
+
+    opacity: 0.5;
+  }
 }
 
 @media (max-width: $tablet-width) {

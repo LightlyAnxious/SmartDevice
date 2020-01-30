@@ -1,46 +1,7 @@
-.accordion__toggle {
-  position: relative;
+@media (max-width: $mobile-width) {
+  .accordion__toggle {
+    position: relative;
 
-  &::before {
-    position: absolute;
-    content: "";
-    top: 50%;
-    left: 0;
-
-    width: 16px;
-    height: 1px;
-
-    background-color: $dark-navy-color;
-
-    opacity: 0.2;
-  }
-
-  &::after {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 50%;
-
-    width: 1px;
-    height: 16px;
-
-    background-color: $dark-navy-color;
-
-    opacity: 0.2;
-  }
-
-  &:hover::before,
-  &:hover::after {
-    opacity: 0.5;
-    cursor: pointer;
-  }
-
-  &:active::before,
-  &:active::after {
-    opacity: 1;
-  }
-
-  &--active {
     &::before {
       position: absolute;
       content: "";
@@ -59,23 +20,68 @@
       position: absolute;
       content: "";
       top: 0;
-      left: 0;
+      left: 50%;
 
-      width: 0;
-      height: 0;
+      width: 1px;
+      height: 16px;
+
+      background-color: $dark-navy-color;
+
+      opacity: 0.2;
     }
 
-    &:hover::before {
+    &:hover::before,
+    &:hover::after {
       opacity: 0.5;
       cursor: pointer;
     }
 
-    &:active::before {
+    &:active::before,
+    &:active::after {
       opacity: 1;
     }
-  }
-}
 
-.accordion__menu {
-  overflow: hidden;
+    & + .accordion__menu {
+      display: none;
+    }
+
+    &--active {
+      &::before {
+        position: absolute;
+        content: "";
+        top: 50%;
+        left: 0;
+
+        width: 16px;
+        height: 1px;
+
+        background-color: $dark-navy-color;
+
+        opacity: 0.2;
+      }
+
+      &::after {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+
+        width: 0;
+        height: 0;
+      }
+
+      &:hover::before {
+        opacity: 0.5;
+        cursor: pointer;
+      }
+
+      &:active::before {
+        opacity: 1;
+      }
+
+      & + .accordion__menu {
+        display: flex;
+      }
+    }
+  }
 }

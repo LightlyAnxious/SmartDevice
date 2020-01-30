@@ -1,0 +1,258 @@
+.modal {
+  display: none;
+
+  &--show {
+    display: block;
+    // animation: bounce 0.6s;
+  }
+
+  // &--error {
+  //   // animation: shake 0.6s;
+  // }
+}
+
+.modal__layout {
+  position: fixed;
+  content: "";
+  z-index: 10;
+  left: 50%;
+  top: 50%;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.2);
+
+  transform: translate(-50%, -50%);
+}
+
+.modal__wrapper {
+  position: fixed;
+  z-index: 15;
+  left: 50%;
+  top: 50%;
+
+  width: 490px;
+  margin: 0;
+  padding: 0;
+
+  background-color: $blue-color;
+
+  color: #ffffff;
+
+  transform: translate(-50%, -50%);
+
+  & h2 {
+    @include roboto-r;
+
+    margin: 33px 0 10px 39px;
+    font-size: 28px;
+    line-height: 140.62%;
+  }
+
+  & p {
+    width: 385px;
+    margin: 9px auto 28px 39px;
+  }
+}
+
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 411px;
+  margin: 0 auto;
+
+  & input[type="text"],
+  & input[type="tel"] {
+    width: 411px;
+    min-height: 50px;
+    margin-bottom: 32px;
+    border: none;
+
+    line-height: 22px;
+    color: #ffffff;
+
+    background-color: #19baff;
+
+    &::placeholder {
+      padding: 14px 0 14px 24px;
+
+      color: #ffffff;
+    }
+  }
+
+  & textarea {
+    width: 411px;
+    border: none;
+    resize: none;
+    min-height: 104px;
+    margin-bottom: 30px;
+    padding: 0;
+
+    background-color: #19baff;
+
+    &::placeholder {
+      padding: 13px 24px;
+
+      color: #ffffff;
+    }
+  }
+
+  & label {
+    position: relative;
+
+    width: 337px;
+    min-width: 194px;
+    margin-bottom: 36px;
+
+    font-size: 14px;
+    line-height: 16px;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.5;
+    }
+
+    &:active {
+      opacity: 0.2;
+    }
+  }
+}
+
+.modal__controls {
+  display: flex;
+  flex-direction: column;
+
+  cursor: pointer;
+
+  & button {
+    @include button-reset;
+    @include button-style;
+
+    max-width: 100%;
+    padding: 14px 80px 14px 80px;
+    margin-bottom: 34px;
+    border: 1px solid #ffffff;
+
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  & input[type="checkbox"] {
+    & + label {
+      position: relative;
+
+      margin-left: 48px;
+
+      &::before {
+        position: absolute;
+        top: 0;
+        left: -48px;
+        content: "";
+        z-index: 3;
+
+        width: 13px;
+        height: 13px;
+        border: 1px solid #ffffff;
+
+        background-color: $blue-color;
+        cursor: pointer;
+      }
+
+      &:hover::before {
+        opacity: 0.5;
+      }
+
+      &:active {
+        opacity: 0.2;
+      }
+    }
+  }
+
+
+  & input[type="checkbox"]:checked {
+    & + label {
+      &::before {
+        background: 2px 4px url("../img/check.svg") no-repeat;
+      }
+    }
+  }
+}
+
+.modal__close {
+  @include button-reset;
+
+  position: absolute;
+  z-index: 20;
+
+  display: block;
+  width: 17px;
+  height: 17px;
+
+  top: 29px;
+  right: 22px;
+
+  color: transparent;
+
+  &::before {
+    position: absolute;
+    content: "";
+    z-index: 25;
+
+    display: block;
+    width: 20px;
+    height: 1px;
+
+    border-radius: 5px;
+
+    background: #ffffff;
+
+    transform: matrix(0.71, 0.71, 0.71, -0.71, 0, 0);
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    z-index: 25;
+
+    display: block;
+    width: 20px;
+    height: 1px;
+
+    border-radius: 5px;
+
+    background: #ffffff;
+
+    transform: matrix(0.71, -0.71, -0.71, -0.71, 0, 0);
+  }
+}
+// @keyframes bounce {
+//   0% {
+//     transform: translateY(-2000px);
+//   }
+
+//   70% {
+//     transform: translateY(30px);
+//   }
+
+//   90% {
+//     transform: translateY(-10px);
+//   }
+
+//   100% {
+//     transform: translateY(-50%);
+//   }
+// }
+
+// @keyframes shake {
+//   0%, 100% {
+//     transform: translate(-50%, -50%);
+//   }
+//   10%, 30%, 50%, 70%, 90% {
+//     transform: translate(calc(-50% - 10px), -50%);
+//   }
+//   20%, 40%, 60%, 80% {
+//     transform: translate(calc(-50% + 10px), -50%);
+//   }
+// }

@@ -21,6 +21,16 @@
     margin: 1.7% auto 0 15.38%;
   }
 
+  & span {
+    &:nth-of-type(even) {
+      display: block;
+    }
+
+    &:nth-of-type(odd) {
+      display: none;
+    }
+  }
+
   & a {
     @include button-style;
 
@@ -33,6 +43,29 @@
     font-size: 14px;
     line-height: 16px;
     color: $blue-color;
+
+    cursor: pointer;
+
+    &:hover {
+      color: #ffffff;
+
+      background-color: $blue-color;
+    }
+
+    &:active {
+      color: #ffffff;
+
+      background-color: $blue-color;
+
+      opacity: 0.5;
+    }
+  }
+}
+
+@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+  .about-company {
+    background: 1% 2% url("../img/2005_2x.png") no-repeat;
+    background-size: 220px 317px;
   }
 }
 
@@ -51,12 +84,16 @@
 
     & p {
       width: 73.88%;
-      margin: 0 auto 3% 26%;
+      margin: 0 0 2.8% 26%;
+    }
 
-      &:nth-of-type(2n) {
-        max-height: 85px;
-        overflow: hidden;
-        text-overflow: ellipsis;
+    & span {
+      &:nth-of-type(even) {
+        display: none;
+      }
+
+      &:nth-of-type(odd) {
+        display: inline-block;
       }
     }
 
@@ -65,6 +102,13 @@
       margin-top: 3%;
       margin-left: 26%;
       margin-bottom: 11.5%;
+    }
+  }
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    .about-company {
+      background: 1% 2% url("../img/2005_tablet_2x.png") no-repeat;
+      background-size: 244px 362px;
     }
   }
 }

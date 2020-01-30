@@ -7,6 +7,15 @@
   background-color: $dark-navy-color;
 }
 
+@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+  .page-header {
+    background: url("../img/banner_bg_2x.png") no-repeat, url("../img/banner_triangles.svg") no-repeat, url("../img/board_2x.png") no-repeat;
+    background-position: 0 0, 50% 0, 85.5% 71%;
+    background-size: cover, auto, 705px 515px;
+    background-color: $dark-navy-color;
+  }
+}
+
 .page-header__wrapper {
   width: 73.8%;
   padding: 0 13.2% 0 13%;
@@ -19,7 +28,7 @@
   flex-direction: column;
   flex-wrap: wrap;
 
-  & h2 {
+  & h1 {
     @include roboto-b;
 
     margin: 0;
@@ -62,8 +71,8 @@
 
   align-self: flex-start;
   border: 1px solid $blue-color;
-  padding: 17px 45px 14px 45px;
-  margin: 18px auto 47px 94px;
+  padding: 15px 45px 17px 45px;
+  margin: 20px auto 47px 96px;
 
   color: #ffffff;
 
@@ -71,6 +80,20 @@
 
   &--mobile {
     display: none;
+  }
+
+  &:hover {
+    color: rgba(1, 178, 255, 1);
+
+    background-color: #ffffff;
+  }
+
+  &:active {
+    color: rgba(1, 178, 255, 1);
+
+    background-color: #ffffff;
+
+    opacity: 0.5;
   }
 }
 
@@ -87,8 +110,17 @@
   color: #ffffff;
   opacity: 0.5;
 
+  cursor: pointer;
   transform-origin: left top;
   transform: rotate(-90deg);
+
+  &:hover {
+    color: rgba(1, 178, 255, 1);
+  }
+
+  &:active {
+    color: rgba(1, 178, 255, 0.3);
+  }
 }
 
 @media (max-width: $tablet-width) {
@@ -99,6 +131,15 @@
     background-color: $dark-navy-color;
   }
 
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    .page-header {
+      background: url("../img/banner_tablet_bg_2x.png") no-repeat, url("../img/banner_triangles_tablet.svg") no-repeat, url("../img/board_tablet_2x.png") no-repeat;
+      background-position: 0 0, 100% 27%, 100% 33%;
+      background-size: cover, auto, 260px 310px;
+      background-color: $dark-navy-color;
+    }
+  }
+
   .page-header__wrapper {
     width: 93.6%;
     padding: 0 3.2% 0 3.2%;
@@ -106,7 +147,7 @@
   }
 
   .page-header__promo {
-    & h2 {
+    & h1 {
       width: 42.36%;
       margin: 96px auto 16px 63px;
 
@@ -147,6 +188,15 @@
     background-color: $dark-navy-color;
   }
 
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    .page-header {
+      background: url("../img/banner_mobile_bg_2x.png") no-repeat, url("../img/banner_triangles_mobile.svg") no-repeat, url("../img/board_mobile_2x.png") no-repeat;
+      background-position: 0 0, 100% 60%, 100% 21.5%;
+      background-size: cover, auto, 294px 220px;
+      background-color: $dark-navy-color;
+    }
+  }
+
   .page-header__wrapper {
     width: 90%;
     padding: 0 5%;
@@ -154,7 +204,7 @@
   }
 
   .page-header__promo {
-    & h2 {
+    & h1 {
       width: 42.36%;
       margin: 73.95% auto 4.51% 0;
 

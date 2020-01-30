@@ -16,7 +16,7 @@
 
   & h2 {
     width: 74.35%;
-    margin: 93px auto 47px 0;
+    margin: 90px auto 49px 0;
 
     font-size: 36px;
     line-height: 51px;
@@ -58,16 +58,29 @@
 
   color: #ffffff;
 
+  &:hover {
+    outline: $blue-color;
+  }
+
+  &:active {
+    outline: $blue-color;
+
+    opacity: 0.5;
+  }
+
   &--manufacture {
-    background: 0 0 url("../img/feature_1.png");
+    background: 0 0 url("../img/feature_1.png") no-repeat;
+    background-size: cover;
   }
 
   &--install {
-    background: 0 0 url("../img/feature_2.png");
+    background: 0 0 url("../img/feature_2.png") no-repeat;
+    background-size: cover;
   }
 
   &--parts {
-    background: 0 0 url("../img/feature_3.png");
+    background: 0 0 url("../img/feature_3.png") no-repeat;
+    background-size: cover;
   }
 
   & p {
@@ -119,6 +132,25 @@
   }
 }
 
+@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+  .features__link {
+    &--manufacture {
+      background: 0 0 url("../img/feature_1_2x.png") no-repeat;
+      background-size: cover;
+    }
+
+    &--install {
+      background: 0 0 url("../img/feature_2_2x.png") no-repeat;
+      background-size: cover;
+    }
+
+    &--parts {
+      background: 0 0 url("../img/feature_3_2x.png") no-repeat;
+      background-size: cover;
+    }
+  }
+}
+
 @media (max-width: $tablet-width) {
   .features__wrapper {
     width: 93.5%;
@@ -157,22 +189,48 @@
     height: auto;
     min-height: 256px;
 
-    &--manufacture {
-      background: 0 0 url("../img/feature_1_tablet.png");
-    }
-
-    &--install {
-      background: 0 0 url("../img/feature_2_tablet.png");
-    }
-
-    &--parts {
-      background: 0 0 url("../img/feature_3_tablet.png");
-    }
-
     & p {
       width: 154px;
       margin: 5.6% auto 0 5.97%;
       align-self: unset;
+    }
+
+    &--manufacture {
+      background: 0 0 url("../img/feature_1_tablet.png") no-repeat;
+      background-size: cover;
+    }
+
+    &--install {
+      background: 0 0 url("../img/feature_2_tablet.png") no-repeat;
+      background-size: cover;
+    }
+
+    &--parts {
+      background: 0 0 url("../img/feature_3_tablet.png") no-repeat;
+      background-size: cover;
+
+      & p {
+        margin-top: 50px;
+      }
+    }
+  }
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    .features__link {
+      &--manufacture {
+        background: 0 0 url("../img/feature_1_tablet_2x.png") no-repeat;
+        background-size: cover;
+      }
+
+      &--install {
+        background: 0 0 url("../img/feature_2_tablet_2x.png") no-repeat;
+        background-size: cover;
+      }
+
+      &--parts {
+        background: 0 0 url("../img/feature_3_tablet_2x.png") no-repeat;
+        background-size: cover;
+      }
     }
   }
 }
@@ -219,6 +277,25 @@
     &--parts {
       background: 0 0 url("../img/feature_3_mobile.png") no-repeat;
       background-size: cover;
+    }
+  }
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    .features__link {
+      &--manufacture {
+        background: 0 0 url("../img/feature_1_mobile_2x.png") no-repeat;
+        background-size: cover;
+      }
+
+      &--install {
+        background: 0 0 url("../img/feature_2_mobile_2x.png") no-repeat;
+        background-size: cover;
+      }
+
+      &--parts {
+        background: 0 0 url("../img/feature_3_mobile_2x.png") no-repeat;
+        background-size: cover;
+      }
     }
   }
 }

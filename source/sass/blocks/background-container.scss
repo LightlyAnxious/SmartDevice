@@ -7,9 +7,20 @@
 
   &--blue {
     background: url("../img/form_bg.svg") no-repeat, url("../img/form_triangles.svg") no-repeat, url("../img/paper_airplane.png") no-repeat;
-    background-position: 100% 0, 15% 50%, 25% 41%;
+    background-position: 100% 0, 15% 50%, 25% 42%;
     background-size: auto, auto, 511px 288px;
     background-color: $blue-color;
+  }
+}
+
+@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+  .background-container {
+    &--blue {
+      background: url("../img/form_bg.svg") no-repeat, url("../img/form_triangles.svg") no-repeat, url("../img/paper_airplane_2x.png") no-repeat;
+      background-position: 100% 0, 15% 50%, 25% 42%;
+      background-size: auto, auto, 511px 288px;
+      background-color: $blue-color;
+    }
   }
 }
 
