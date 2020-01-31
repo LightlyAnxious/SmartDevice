@@ -107,7 +107,7 @@
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     .about-company {
-      background: 1% 2% url("../img/2005_tablet_2x.png") no-repeat;
+      background: 0 22.5% url("../img/2005_tablet_2x.png") no-repeat;
       background-size: 244px 362px;
     }
   }
@@ -120,14 +120,14 @@
     background-image: unset;
 
     & h2 {
-      margin: 13.7% auto 6.7% 0;
+      margin: 13% auto 6.9% 0;
       font-size: 28px;
     }
 
     & p {
       width: 100%;
       margin-left: 0;
-      margin-bottom: 14%;
+      margin-bottom: 13.7%;
 
       &:nth-of-type(2n) {
         max-height: 175px;

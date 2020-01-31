@@ -135,7 +135,7 @@
     .page-header {
       background: url("../img/banner_tablet_bg_2x.png") no-repeat, url("../img/banner_triangles_tablet.svg") no-repeat, url("../img/board_tablet_2x.png") no-repeat;
       background-position: 0 0, 100% 27%, 100% 33%;
-      background-size: cover, auto, 260px 310px;
+      background-size: cover, auto, 260px 350px;
       background-color: $dark-navy-color;
     }
   }
@@ -215,9 +215,13 @@
 
     & p {
       width: 77%;
-      margin: 5.7% auto 5% 16.66%;
+      margin: 5.7% auto 5% 17%;
 
       font-size: 16px;
+
+      &::before {
+        left: -47px;
+      }
     }
   }
 
