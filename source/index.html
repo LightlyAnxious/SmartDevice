@@ -139,9 +139,9 @@
         <div class="contact-form__wrapper">
           <h2>Остались вопросы? Задайте их нам!</h2>
           <p>Мы проконсультируем Вас бесплатно</p>
-          <input class="contact-form__input" type="text" name="name" id="name" placeholder="Имя" required aria-label="Введите свое имя" autocomplete="name">
-          <input class="contact-form__input" type="tel" name="tel" id="tel" placeholder="Телефон" aria-label="Введите свой телефон" autocomplete="tel">
-          <textarea name="question" id="question" cols="10" rows="5" wrap="hard" placeholder="Ваш вопрос" aria-label="Напишите свой вопрос"></textarea>
+          <input class="contact-form__input" type="text" name="name" id="name" placeholder="Имя" required aria-label="Введите свое имя">
+          <input class="contact-form__input" type="tel" name="tel" id="tel" placeholder="Телефон" required aria-label="Введите свой телефон">
+          <textarea name="question" id="question" cols="10" rows="5" wrap="hard" placeholder="Ваш вопрос" required aria-label="Напишите свой вопрос"></textarea>
           <div class="contact-form__controls">
             <button class="contact-form__button" type="submit" aria-label="задать вопрос">Задать вопрос</button>
             <input class="visually-hidden user-consent" type="checkbox" name="user-consent" id="user-consent" checked>
@@ -252,9 +252,9 @@
       <button class="modal__close"></button>
       <form action="#">
         <div class="modal__form">
-          <input type="text" name="name" id="modal-name" placeholder="Имя" required aria-label="Введите свое имя" autocomplete="name">
-          <input type="tel" name="tel" id="modal-tel" placeholder="Телефон" required aria-label="Введите свой телефон" autocomplete="tel">
-          <textarea name="question" id="modal-question" cols="10" rows="5" wrap="hard" placeholder="Ваш вопрос" aria-label="Напишите свой вопрос"></textarea>
+          <input type="text" name="name" id="modal-name" placeholder="Имя" required aria-label="Введите свое имя">
+          <input type="tel" name="tel" id="modal-tel" placeholder="Телефон" required aria-label="Введите свой телефон">
+          <textarea name="question" id="modal-question" cols="10" rows="5" wrap="hard" required placeholder="Ваш вопрос" aria-label="Напишите свой вопрос"></textarea>
           <div class="modal__controls">
             <button type="submit" aria-label="задать вопрос">Отправить</button>
             <input class="visually-hidden modal__consent" type="checkbox" name="modal__consent" id="modal-consent">

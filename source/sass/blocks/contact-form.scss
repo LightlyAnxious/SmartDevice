@@ -45,6 +45,12 @@
 
       color: #ffffff;
     }
+
+    &:-ms-input-placeholder {
+      padding: 14px 0 14px 17px;
+
+      color: #ffffff;
+    }
   }
 
   & input[type="text"] {
@@ -64,6 +70,12 @@
     color: #ffffff;
 
     &::placeholder {
+      padding: 13px 16px;
+
+      color: #ffffff;
+    }
+
+    &:-ms-input-placeholder {
       padding: 13px 16px;
 
       color: #ffffff;
