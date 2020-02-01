@@ -32,8 +32,10 @@
   & input[type="tel"] {
     width: 270px;
     min-height: 50px;
+    padding: 14px 0 14px 17px;
     margin-bottom: 40px;
     border: none;
+    box-sizing: border-box;
 
     line-height: 22px;
     color: #ffffff;
@@ -41,37 +43,32 @@
     background-color: #19baff;
 
     &::placeholder {
-      padding: 14px 0 14px 17px;
-
       color: #ffffff;
     }
 
     &:-ms-input-placeholder {
-      padding: 14px 0 14px 17px;
-
       color: #ffffff;
     }
   }
 
   & input[type="text"] {
-    margin-right: 16px;
+    margin-right: 20px;
   }
 
   & textarea {
-    width: 100%;
+    width: 570px;
     border: none;
     resize: none;
     min-height: 154px;
-    margin-bottom: 36px;
-    padding: 0;
+    margin-bottom: 39px;
+    padding: 13px 0 0 16px;
+    box-sizing: border-box;
 
     background-color: #19baff;
 
     color: #ffffff;
 
     &::placeholder {
-      padding: 13px 16px;
-
       color: #ffffff;
     }
 
@@ -192,7 +189,7 @@
     & input[type="text"],
     & input[type="tel"] {
       width: 47.37%;
-      padding: 0;
+      // padding: 0;
       margin-bottom: 43px;
     }
 
@@ -201,6 +198,7 @@
     }
 
     & textarea {
+      width: 100%;
       min-height: 160px;
       margin-bottom: 39px;
     }

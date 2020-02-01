@@ -6,6 +6,9 @@
 *.pdf
 *.psd
 *.sublime*
+.eslintignore
+.eslintrc
+.stylelintrc
 layouts/
 source.img/opt/
 node_modules/

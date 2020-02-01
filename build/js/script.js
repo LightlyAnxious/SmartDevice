@@ -100,7 +100,6 @@
 
   if (popup) {
     window.addEventListener('keydown', function (evt) {
-      evt.preventDefault();
       if (evt.keyCode === ESC_KEYCODE) {
         popup.classList.remove('modal--show');
       }

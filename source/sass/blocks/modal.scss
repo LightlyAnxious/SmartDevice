@@ -63,6 +63,7 @@
     width: 411px;
     min-height: 50px;
     margin-bottom: 32px;
+    padding: 14px 0 14px 24px;
     border: none;
     box-sizing: border-box;
 
@@ -72,14 +73,10 @@
     background-color: #19baff;
 
     &::placeholder {
-      padding: 14px 0 14px 24px;
-
       color: #ffffff;
     }
 
     &:-ms-input-placeholder {
-      padding: 14px 0 14px 17px;
-
       color: #ffffff;
     }
   }
