@@ -10,8 +10,9 @@
   var layout = document.querySelector('.modal__layout');
   var closeToggle = document.querySelector('.modal__close');
   var forms = document.getElementsByClassName('form');
-  var accToggle = document.getElementsByClassName('accordion__toggle');
+  var accToggles = document.getElementsByClassName('accordion__toggle');
   var accMenu = document.getElementsByClassName('accordion__menu');
+  var content = document.getElementsByTagName('body');
 
   var getValue = function (el) {
     return el.value;
@@ -28,6 +29,12 @@
 
   var getCollectionForEach = function (collection, callback) {
     [].forEach.call(collection, callback);
+  };
+
+  var hideAll = function (el) {
+    el.classList.remove('accordion__toggle--active');
+
+    return el;
   };
 
   if (forms) {
@@ -60,6 +67,7 @@
       cbToggle.addEventListener('click', function (evt) {
         evt.preventDefault();
         popup.classList.add('modal--show');
+        content[0].style.overflow = 'hidden';
         if (storageLogin || storagePhone) {
           getCollectionForEach(names, setValue(this, storageLogin));
           getCollectionForEach(phones, setValue(this, storagePhone));
@@ -71,6 +79,7 @@
       cbToggle.addEventListener('keydown', function (evt) {
         evt.preventDefault();
         if (evt.keyCode === ENTER_KEYCODE) {
+          content[0].style.overflow = 'hidden';
           popup.classList.add('modal--show');
         }
       });
@@ -80,12 +89,14 @@
       closeToggle.addEventListener('click', function (evt) {
         evt.preventDefault();
         popup.classList.remove('modal--show');
+        content[0].style.overflow = 'auto';
       });
 
       closeToggle.addEventListener('keydown', function (evt) {
         evt.preventDefault();
         if (evt.keyCode === ENTER_KEYCODE) {
           popup.classList.remove('modal--show');
+          content[0].style.overflow = 'auto';
         }
       });
     }
@@ -94,6 +105,7 @@
       layout.addEventListener('click', function (evt) {
         evt.preventDefault();
         popup.classList.remove('modal--show');
+        content[0].style.overflow = 'auto';
       });
     }
   }
@@ -102,16 +114,25 @@
     window.addEventListener('keydown', function (evt) {
       if (evt.keyCode === ESC_KEYCODE) {
         popup.classList.remove('modal--show');
+        content[0].style.overflow = 'auto';
       }
     });
   }
 
   // Пререключение классов аккордеона
 
-  for (j = 0; j < accToggle.length; j++) {
-    if ((accToggle && accMenu) && (accToggle.length === accMenu.length)) {
-      accToggle[j].addEventListener('click', function () {
+  for (j = 0; j < accToggles.length; j++) {
+    var last;
+
+    if ((accToggles && accMenu) && (accToggles.length === accMenu.length)) {
+      accToggles[j].addEventListener('click', function () {
+        getCollectionForEach(accToggles, function (el) {
+          el.classList.toggle('accordion__toggle--active', false)
+          el.classList.toggle('accordion__toggle--show', false)
+        });
+
         this.classList.toggle('accordion__toggle--active');
+        this.classList.toggle('accordion__toggle--show');
       });
     }
   }

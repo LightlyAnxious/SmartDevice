@@ -27,8 +27,9 @@
   @include list-reset;
 
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 127px;
+  // justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 97px;
   width: 100%;
 
   font-size: 20px;
@@ -38,6 +39,11 @@
 .features__item {
   width: 31.62%;
   min-height: 620px;
+  margin: 0 2.56% 2.56% 0;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
 
   &:hover {
     outline: 1px solid $blue-color;
@@ -177,6 +183,7 @@
   .features__item {
     width: 100%;
     min-height: auto;
+    margin: 0;
     margin-bottom: 46px;
 
     &:last-of-type {

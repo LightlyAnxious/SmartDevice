@@ -78,7 +78,9 @@
       &:active::before {
         opacity: 1;
       }
+    }
 
+    &--show {
       & + .accordion__menu {
         display: flex;
       }

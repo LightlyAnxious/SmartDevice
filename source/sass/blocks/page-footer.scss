@@ -52,13 +52,15 @@
 .page-footer__list {
   @include list-reset;
 
+  display: flex;
+  flex-wrap: wrap;
   width: 133px;
-  margin-bottom: 61px;
+  margin-bottom: 45px;
 }
 
 .page-footer__icon {
-  display: inline-block;
-  margin-right: 6px;
+  margin-right: 16px;
+  margin-bottom: 16px;
   width: 27px;
   height: 27px;
 
@@ -284,7 +286,7 @@
 
   .page-footer__list {
     width: 113px;
-    margin: 30px 0 34px 0;
+    margin: 30px 0 18px 0;
   }
 
   .page-footer__logo {
@@ -383,6 +385,10 @@
 
   .page-footer__logo {
     margin: 46px 0 27px 0;
+  }
+
+  .page-footer__list {
+    margin-bottom: 24px;
   }
 
   .page-footer__nav {
