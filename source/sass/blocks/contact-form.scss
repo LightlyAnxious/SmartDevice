@@ -35,7 +35,9 @@
     padding: 14px 0 14px 17px;
     margin-bottom: 40px;
     border: none;
+    border-radius: 0;
     box-sizing: border-box;
+    appearance: none;
 
     line-height: 22px;
     color: #ffffff;
@@ -62,6 +64,8 @@
     min-height: 154px;
     margin-bottom: 39px;
     padding: 13px 0 0 16px;
+    border-radius: 0;
+    appearance: none;
     box-sizing: border-box;
 
     background-color: #19baff;
@@ -73,8 +77,6 @@
     }
 
     &:-ms-input-placeholder {
-      padding: 13px 16px;
-
       color: #ffffff;
     }
   }
