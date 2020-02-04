@@ -1,24 +1,24 @@
 .about-company {
   display: flex;
   flex-direction: column;
-  width: 60.93%;
-  padding: 0 2%;
+  max-width: 1170px;
+  padding: 0 19.53%;
   margin: 0 auto;
 
-  background: 1% 2% url("../img/2005.png") no-repeat;
+  background: 20.4% 0 url("../img/2005.png") no-repeat;
 
   & h2 {
     @include roboto-r;
 
-    margin: 0 auto 0 15.38%;
+    margin: 0 auto 0 180px;
 
     font-size: 36px;
     line-height: 51px;
   }
 
   & p {
-    width: 82.9%;
-    margin: 1.7% auto 0 15.38%;
+    max-width: 984px;
+    margin: 20px 0 0 180px;
   }
 
   & span {
@@ -35,7 +35,7 @@
     @include button-style;
 
     padding: 14px 13px;
-    margin: 3.2% auto 9.4% 15.29%;
+    margin: 37px auto 110px 179px;
     min-width: 180px;
     align-self: flex-start;
     border: 1px solid $blue-color;
@@ -62,9 +62,13 @@
   }
 }
 
+.about-company__wrapper {
+  margin-left: 180px;
+}
+
 @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
   .about-company {
-    background: 1% 2% url("../img/2005_2x.png") no-repeat;
+    background: 20.4% 0 url("../img/2005_2x.png") no-repeat;
     background-size: 220px 317px;
   }
 }

@@ -2,22 +2,37 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  justify-content: space-between;
-}
+  width: 100%;
 
-.main-nav__wrapper {
-  &--left {
+  & a {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 360px;
-  }
+    margin: 50px 6.23% 50px 0;
+    box-sizing: border-box;
 
-  &--right {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 661px;
+    line-height: 18px;
+    color: #ffffff;
+
+    cursor: pointer;
+    fill: $blue-color;
+
+    &:hover {
+      color: rgba(1, 178, 255, 1);
+      fill: #ffffff;
+    }
+
+    &:active {
+      color: rgba(1, 178, 255, 0.3);
+      fill-opacity: 0.5;
+    }
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    &:first-of-type {
+      margin-left: 3.11%;
+    }
   }
 }
 
@@ -36,7 +51,7 @@
 
   width: 39px;
   height: 15px;
-  margin: 52px 0;
+  margin: 52px auto 52px 0;
 
   cursor: pointer;
 
@@ -65,40 +80,6 @@
   }
 }
 
-.main-nav__contacts {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  flex-shrink: 10;
-
-  width: 433px;
-  margin-left: auto;
-  margin-right: 3.45%;
-
-  & a {
-    display: flex;
-    align-items: center;
-    margin: 5.81% 0;
-    box-sizing: border-box;
-
-    line-height: 18px;
-    color: #ffffff;
-
-    cursor: pointer;
-    fill: $blue-color;
-
-    &:hover {
-      color: rgba(1, 178, 255, 1);
-      fill: #ffffff;
-    }
-
-    &:active {
-      color: rgba(1, 178, 255, 0.3);
-      fill-opacity: 0.5;
-    }
-  }
-}
-
 .main-nav__mail-image {
   margin-right: 17px;
 }
@@ -119,7 +100,7 @@
   @include button-reset;
   @include button-style;
 
-  margin: 1.27% 0 1.27% 0;
+  margin: 37px 0 37px 3.7%;
   padding: 12px 28px 14px 27px;
   border: 1px solid #ffffff;
 
@@ -145,6 +126,11 @@
 @media (max-width: $tablet-width) {
   .main-nav {
     min-height: 29.16%;
+
+    & a {
+      margin: 34px 33px;
+      font-size: 0;
+    }
   }
 
   .main-nav__logo {
@@ -156,19 +142,7 @@
   }
 
   .main-nav__menu {
-    margin: 2% 5% 2.5% 0;
-  }
-
-  .main-nav__contacts {
-    width: 11.4%;
-    font-size: 0;
-    margin-left: 0;
-    margin-right: 0;
-    align-items: center;
-
-    & a {
-      margin: 34px 0;
-    }
+    margin: 6px 5% 6px 0;
   }
 
   .main-nav__mail-image {
@@ -189,10 +163,16 @@
 @media (max-width: $mobile-width) {
   .main-nav {
     min-height: 0.25%;
+
+    & a {
+      width: auto;
+      height: auto;
+      margin: 23px 23px 23px 0;
+    }
   }
 
   .main-nav__logo {
-    margin: 5.9% auto 5.6% 0.8%;
+    margin: 16px auto 16px 0;
 
     &--desktop {
       display: none;
@@ -200,16 +180,6 @@
 
     &--mobile {
       display: block;
-    }
-  }
-
-  .main-nav__contacts {
-    width: 25%;
-
-    & a {
-      width: auto;
-      height: auto;
-      margin: 23px 0;
     }
   }
 
