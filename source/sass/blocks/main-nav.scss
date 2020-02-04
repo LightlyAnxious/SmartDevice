@@ -128,8 +128,12 @@
     min-height: 29.16%;
 
     & a {
-      margin: 34px 33px;
+      margin: 34px 33px 34px 0;
       font-size: 0;
+
+      &:first-of-type {
+        margin-left: 0;
+      }
     }
   }
 

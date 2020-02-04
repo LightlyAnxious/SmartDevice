@@ -52,7 +52,7 @@ gulp.task("refresh", function (done) {
 gulp.task("images", function() {
   return gulp.src("source/img/opt/**/*.{png,jpg,svg}")
     .pipe(imagemin([
-      imagemin.optipng({optimizationLevel: 4}),
+      imagemin.optipng({optimizationLevel: 3}),
       imagemin.jpegtran({progressive: true}),
       imagemin.svgo()
     ]))

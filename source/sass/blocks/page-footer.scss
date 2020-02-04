@@ -3,8 +3,8 @@
   flex-direction: column;
   flex-wrap: wrap;
   flex-shrink: 0;
-  width: 73.8%;
-  padding: 0 13.2% 0 13%;
+  width: 96%;
+  padding: 0 2%;
   margin: 0 auto;
   max-width: 1411px;
 
@@ -59,8 +59,8 @@
 }
 
 .page-footer__icon {
-  margin-right: 16px;
-  margin-bottom: 16px;
+  margin-right: 14px;
+  margin-bottom: 14px;
   width: 27px;
   height: 27px;
 
@@ -319,17 +319,6 @@
     justify-content: space-between;
   }
 
-  .page-footer__container {
-    &--left {
-      display: none;
-    }
-
-    &--right {
-      width: 100%;
-      margin: 22px 0;
-    }
-  }
-
   .page-footer__copyright {
     margin-right: 0;
 
@@ -354,6 +343,14 @@
 
     &--trademark {
       display: none;
+    }
+
+    &--privacy {
+      margin: 23px 0;
+    }
+
+    &--dev {
+      margin: 23px 0;
     }
   }
 }
