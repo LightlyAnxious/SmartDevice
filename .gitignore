@@ -10,8 +10,8 @@
 .eslintrc
 .stylelintrc
 layouts/
-source/img/**/opt
-build/img/**/opt
+source/img/opt
+build/img/opt
 node_modules/
 npm-debug.*
 Thumbs.db
