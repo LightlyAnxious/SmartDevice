@@ -78,6 +78,10 @@
     background-color: rgba(1, 178, 255, 0.3);
     box-shadow: 0 11px 0 0 rgba(1, 178, 255, 0.3);
   }
+
+  &:focus {
+    outline: 5px solid #4d90fe;
+  }
 }
 
 .main-nav__mail-image {

@@ -1,15 +1,33 @@
-.page-header {
+.webp .page-header {
+  background-image: url("../img/banner_bg.webp"), url("../img/banner_triangles.svg"), url("../img/board.webp");
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: 0 0, 50% 0, 1038px 71%;
+  background-size: cover, auto, 705px 515px;
+  background-color: $dark-navy-color;
+}
+
+.no-webp .page-header {
   flex-shrink: 0;
 
-  background: url("../img/banner_bg.png") no-repeat, url("../img/banner_triangles.svg") no-repeat, url("../img/board.png") no-repeat;
+  background-image: url("../img/banner_bg.png"), url("../img/banner_triangles.svg"), url("../img/board.png");
+  background-repeat: no-repeat, no-repeat, no-repeat;
   background-position: 0 0, 50% 0, 1038px 71%;
   background-size: cover, auto, 705px 515px;
   background-color: $dark-navy-color;
 }
 
 @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-  .page-header {
-    background: url("../img/banner_bg_2x.png") no-repeat, url("../img/banner_triangles.svg") no-repeat, url("../img/board_2x.png") no-repeat;
+  .no-webp .page-header {
+    background-image: url("../img/banner_bg_2x.png"), url("../img/banner_triangles.svg"), url("../img/board_2x.png");
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: 0 0, 50% 0, 1038px 71%;
+    background-size: cover, auto, 705px 515px;
+    background-color: $dark-navy-color;
+  }
+
+  .webp .page-header {
+    background-image: url("../img/banner_bg_2x.webp"), url("../img/banner_triangles.svg"), url("../img/board_2x.webp");
+    background-repeat: no-repeat, no-repeat, no-repeat;
     background-position: 0 0, 50% 0, 1038px 71%;
     background-size: cover, auto, 705px 515px;
     background-color: $dark-navy-color;
@@ -124,16 +142,34 @@
 }
 
 @media (max-width: $tablet-width) {
-  .page-header {
-    background: url("../img/banner_tablet_bg.png") no-repeat, url("../img/banner_triangles_tablet.svg") no-repeat, url("../img/board_tablet.png") no-repeat;
+  .no-webp .page-header {
+    background-image: url("../img/banner_tablet_bg.png"), url("../img/banner_triangles_tablet.svg"), url("../img/board_tablet.png");
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: 0 0, 100% 27%, 100% 33%;
+    background-size: cover, auto, auto;
+    background-color: $dark-navy-color;
+  }
+
+  .webp .page-header {
+    background-image: url("../img/banner_tablet_bg.webp"), url("../img/banner_triangles_tablet.svg"), url("../img/board_tablet.webp");
+    background-repeat: no-repeat, no-repeat, no-repeat;
     background-position: 0 0, 100% 27%, 100% 33%;
     background-size: cover, auto, auto;
     background-color: $dark-navy-color;
   }
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    .page-header {
-      background: url("../img/banner_tablet_bg_2x.png") no-repeat, url("../img/banner_triangles_tablet.svg") no-repeat, url("../img/board_tablet_2x.png") no-repeat;
+    .no-webp .page-header {
+      background-image: url("../img/banner_tablet_bg_2x.png"), url("../img/banner_triangles_tablet.svg"), url("../img/board_tablet_2x.png");
+      background-repeat: no-repeat;
+      background-position: 0 0, 100% 27%, 100% 33%;
+      background-size: cover, auto, 260px 350px;
+      background-color: $dark-navy-color;
+    }
+
+    .webp .page-header {
+      background-image: url("../img/banner_tablet_bg_2x.webp"), url("../img/banner_triangles_tablet.svg"), url("../img/board_tablet_2x.webp");
+      background-repeat: no-repeat;
       background-position: 0 0, 100% 27%, 100% 33%;
       background-size: cover, auto, 260px 350px;
       background-color: $dark-navy-color;
@@ -181,16 +217,34 @@
 }
 
 @media (max-width: $mobile-width) {
-  .page-header {
-    background: url("../img/banner_mobile_bg.png") no-repeat, url("../img/banner_triangles_mobile.svg") no-repeat, url("../img/board_mobile.png") no-repeat;
+  .no-webp .page-header {
+    background-image: url("../img/banner_mobile_bg.png"), url("../img/banner_triangles_mobile.svg"), url("../img/board_mobile.png");
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: 0 0, 100% 0, 100% 92px;
+    background-size: cover, auto, auto;
+    background-color: $dark-navy-color;
+  }
+
+  .webp .page-header {
+    background-image: url("../img/banner_mobile_bg.webp"), url("../img/banner_triangles_mobile.svg"), url("../img/board_mobile.webp");
+    background-repeat: no-repeat, no-repeat, no-repeat;
     background-position: 0 0, 100% 0, 100% 92px;
     background-size: cover, auto, auto;
     background-color: $dark-navy-color;
   }
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    .page-header {
-      background: url("../img/banner_mobile_bg_2x.png") no-repeat, url("../img/banner_triangles_mobile.svg") no-repeat, url("../img/board_mobile_2x.png") no-repeat;
+    .no-webp .page-header {
+      background-image: url("../img/banner_mobile_bg_2x.png"), url("../img/banner_triangles_mobile.svg"), url("../img/board_mobile_2x.png");
+      background-repeat: no-repeat, no-repeat, no-repeat;
+      background-position: 0 0, 100% 0, 100% 92px;
+      background-size: cover, auto, 294px 220px;
+      background-color: $dark-navy-color;
+    }
+
+    .webp .page-header {
+      background-image: url("../img/banner_mobile_bg_2x.webp"), url("../img/banner_triangles_mobile.svg"), url("../img/board_mobile_2x.webp");
+      background-repeat: no-repeat, no-repeat, no-repeat;
       background-position: 0 0, 100% 0, 100% 92px;
       background-size: cover, auto, 294px 220px;
       background-color: $dark-navy-color;

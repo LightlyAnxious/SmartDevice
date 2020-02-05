@@ -79,6 +79,10 @@
     &:-ms-input-placeholder {
       color: #ffffff;
     }
+
+    &:focus {
+      outline: 5px solid #4d90fe;
+    }
   }
 
   & textarea {
@@ -87,21 +91,21 @@
     resize: none;
     min-height: 104px;
     margin-bottom: 30px;
-    padding: 0;
+    padding: 13px 24px;
     box-sizing: border-box;
 
     background-color: #19baff;
 
     &::placeholder {
-      padding: 13px 24px;
-
       color: #ffffff;
     }
 
     &:-ms-input-placeholder {
-      padding: 13px 16px;
-
       color: #ffffff;
+    }
+
+    &:focus {
+      outline: 5px solid #4d90fe;
     }
   }
 
@@ -143,6 +147,24 @@
 
     font-size: 14px;
     line-height: 16px;
+
+    &:hover {
+      color: $blue-color;
+
+      background-color: #ffffff;
+    }
+
+    &:active {
+      color: $blue-color;
+
+      background-color: #ffffff;
+
+      opacity: 0.5;
+    }
+
+    &:focus {
+      outline: 5px solid #4d90fe;
+    }
   }
 
   & input[type="checkbox"] {
@@ -231,5 +253,9 @@
     background: #ffffff;
 
     transform: matrix(0.71, -0.71, -0.71, -0.71, 0, 0);
+  }
+
+  &:focus {
+    outline: 5px solid #4d90fe;
   }
 }

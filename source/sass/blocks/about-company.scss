@@ -5,8 +5,6 @@
   padding: 0 19.53%;
   margin: 0 auto;
 
-  background: 20.4% 0 url("../img/2005.png") no-repeat;
-
   & h2 {
     @include roboto-r;
 
@@ -62,13 +60,32 @@
   }
 }
 
+.no-webp .about-company {
+  background-image: url("../img/2005.png");
+  background-repeat: no-repeat;
+  background-position: 20.4% 0;
+}
+
+.webp .about-company {
+  background-image: url("../img/2005.webp");
+  background-repeat: no-repeat;
+  background-position: 20.4% 0;
+}
+
 .about-company__wrapper {
   margin-left: 180px;
 }
 
 @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-  .about-company {
-    background: 20.4% 0 url("../img/2005_2x.png") no-repeat;
+  .no-webp .about-company {
+    background-image: url("../img/2005.png");
+    background-repeat: no-repeat;
+    background-size: 220px 317px;
+  }
+
+  .webp .about-company {
+    background-image: url("../img/2005.webp");
+    background-repeat: no-repeat;
     background-size: 220px 317px;
   }
 }
@@ -77,8 +94,6 @@
   .about-company {
     width: 93.5%;
     padding: 0 3.25%;
-
-    background: 0 22.5% url("../img/2005__tablet.png") no-repeat;
 
     & h2 {
       margin: 3.5% auto 3.5% 25.7%;
@@ -109,9 +124,30 @@
     }
   }
 
+  .no-webp .about-company {
+    background-image: url("../img/2005_tablet.png");
+    background-repeat: no-repeat;
+    background-position: 0 22.5%;
+  }
+
+  .webp .about-company {
+    background-image: url("../img/2005_tablet.webp");
+    background-repeat: no-repeat;
+    background-position: 0 22.5%;
+  }
+
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    .about-company {
-      background: 0 22.5% url("../img/2005_tablet_2x.png") no-repeat;
+    .no-webp .about-company {
+      background-image: url("../img/2005_tablet_2x.png");
+      background-repeat: no-repeat;
+      background-position: 0 22.5%;
+      background-size: 244px 362px;
+    }
+
+    .webp .about-company {
+      background-image: url("../img/2005_tablet_2x.webp");
+      background-repeat: no-repeat;
+      background-position: 0 22.5%;
       background-size: 244px 362px;
     }
   }
@@ -120,8 +156,6 @@
 @media (max-width: $mobile-width) {
   .about-company {
     width: 90.62%;
-
-    background-image: unset;
 
     & h2 {
       margin: 13% auto 6.9% 0;
@@ -147,5 +181,13 @@
       margin-left: 1%;
       margin-top: 10%;
     }
+  }
+
+  .no-webp .about-company {
+    background-image: unset;
+  }
+
+  .webp .about-company {
+    background-image: unset;
   }
 }

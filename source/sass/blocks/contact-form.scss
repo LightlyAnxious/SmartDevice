@@ -51,6 +51,10 @@
     &:-ms-input-placeholder {
       color: #ffffff;
     }
+
+    &:focus {
+      outline: 5px solid #4d90fe;
+    }
   }
 
   & input[type="text"] {
@@ -78,6 +82,10 @@
 
     &:-ms-input-placeholder {
       color: #ffffff;
+    }
+
+    &:focus {
+      outline: 5px solid #4d90fe;
     }
   }
 
