@@ -27,7 +27,6 @@
   @include list-reset;
 
   display: flex;
-  // justify-content: space-between;
   flex-wrap: wrap;
   margin-bottom: 97px;
   width: 100%;
@@ -72,6 +71,24 @@
     outline: $blue-color;
 
     opacity: 0.5;
+  }
+
+  &--manufacture {
+    background-image: url("../img/feature_1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &--install {
+    background-image: url("../img/feature_2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &--parts {
+    background-image: url("../img/feature_3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   & p {
@@ -123,82 +140,22 @@
   }
 }
 
-.no-webp {
-  & .features__link--manufacture {
-    background-image: url("../img/feature_1.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-  & .features__link--install {
-    background-image: url("../img/feature_2.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-  & .features__link--parts {
-    background-image: url("../img/feature_3.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-}
-
-.webp {
-  & .features__link--manufacture {
-    background-image: url("../img/feature_1.webp");
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-  & .features__link--install {
-    background-image: url("../img/feature_2.webp");
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-  & .features__link--parts {
-    background-image: url("../img/feature_3.webp");
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-}
-
 @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-  .no-webp {
-    & .features__link--manufacture {
+  .features__link {
+    &--manufacture {
       background-image: url("../img/feature_1_2x.png");
       background-repeat: no-repeat;
       background-size: cover;
     }
 
-    & .features__link--install {
+    &--install {
       background-image: url("../img/feature_2_2x.png");
       background-repeat: no-repeat;
       background-size: cover;
     }
 
-    & .features__link--parts {
+    &--parts {
       background-image: url("../img/feature_3_2x.png");
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-  }
-
-  .webp {
-    & .features__link--manufacture {
-      background-image: url("../img/feature_1_2x.webp");
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-
-    & .features__link--install {
-      background-image: url("../img/feature_2_2x.webp");
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-
-    & .features__link--parts {
-      background-image: url("../img/feature_3_2x.webp");
       background-repeat: no-repeat;
       background-size: cover;
     }
@@ -244,48 +201,20 @@
     height: auto;
     min-height: 256px;
 
-    & p {
-      width: 154px;
-      margin: 5.6% auto 0 5.97%;
-      align-self: unset;
-    }
-  }
-
-  .no-webp {
-    & .features__link--manufacture {
+    &--manufacture {
       background-image: url("../img/feature_1_tablet.png");
       background-repeat: no-repeat;
       background-size: cover;
     }
 
-    & .features__link--install {
+    &--install {
       background-image: url("../img/feature_2_tablet.png");
       background-repeat: no-repeat;
       background-size: cover;
     }
 
-    & .features__link--parts {
+    &--parts {
       background-image: url("../img/feature_3_tablet.png");
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-  }
-
-  .webp {
-    & .features__link--manufacture {
-      background-image: url("../img/feature_1_tablet.webp");
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-
-    & .features__link--install {
-      background-image: url("../img/feature_2_tablet.webp");
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-
-    & .features__link--parts {
-      background-image: url("../img/feature_3_tablet.webp");
       background-repeat: no-repeat;
       background-size: cover;
 
@@ -293,50 +222,32 @@
         margin-top: 50px;
       }
     }
+
+    & p {
+      width: 154px;
+      margin: 5.6% auto 0 5.97%;
+      align-self: unset;
+    }
   }
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    .no-webp {
-      & .features__link--manufacture {
+    .features__link {
+      &--manufacture {
         background-image: url("../img/feature_1_tablet_2x.png");
         background-repeat: no-repeat;
         background-size: cover;
       }
 
-      & .features__link--install {
+      &--install {
         background-image: url("../img/feature_2_tablet_2x.png");
         background-repeat: no-repeat;
         background-size: cover;
       }
 
-      & .features__link--parts {
+      &--parts {
         background-image: url("../img/feature_3_tablet_2x.png");
         background-repeat: no-repeat;
         background-size: cover;
-      }
-    }
-
-    .webp {
-      & .features__link--manufacture {
-        background-image: url("../img/feature_1_tablet_2x.webp");
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
-
-      & .features__link--install {
-        background-image: url("../img/feature_2_tablet_2x.webp");
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
-
-      & .features__link--parts {
-        background-image: url("../img/feature_3_tablet_2x.webp");
-        background-repeat: no-repeat;
-        background-size: cover;
-
-        & p {
-          margin-top: 50px;
-        }
       }
     }
   }
@@ -366,88 +277,46 @@
   }
 
   .features__link {
+    &--manufacture {
+      background-image: url("../img/feature_1_mobile.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    &--install {
+      background-image: url("../img/feature_2_mobile.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    &--parts {
+      background-image: url("../img/feature_3_mobile.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
     & p {
       margin-top: 7%;
       margin-left: 12%;
     }
   }
 
-  .no-webp {
-    & .features__link--manufacture {
-      background-image: url("../img/feature_1_mobile.png");
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-
-    & .features__link--install {
-      background-image: url("../img/feature_2_mobile.png");
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-
-    & .features__link--parts {
-      background-image: url("../img/feature_3_mobile.png");
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-  }
-
-  .webp {
-    & .features__link--manufacture {
-      background-image: url("../img/feature_1_mobile.webp");
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-
-    & .features__link--install {
-      background-image: url("../img/feature_2_mobile.webp");
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-
-    & .features__link--parts {
-      background-image: url("../img/feature_3_mobile.webp");
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-  }
-
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    .no-webp {
-      & .features__link--manufacture {
+    .features__link {
+      &--manufacture {
         background-image: url("../img/feature_1_mobile_2x.png");
         background-repeat: no-repeat;
         background-size: cover;
       }
 
-      & .features__link--install {
+      &--install {
         background-image: url("../img/feature_2_mobile_2x.png");
         background-repeat: no-repeat;
         background-size: cover;
       }
 
-      & .features__link--parts {
+      &--parts {
         background-image: url("../img/feature_3_mobile_2x.png");
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
-    }
-
-    .webp {
-      & .features__link--manufacture {
-        background-image: url("../img/feature_1_mobile_2x.webp");
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
-
-      & .features__link--install {
-        background-image: url("../img/feature_2_mobile_2x.webp");
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
-
-      & .features__link--parts {
-        background-image: url("../img/feature_3_mobile_2x.webp");
         background-repeat: no-repeat;
         background-size: cover;
       }

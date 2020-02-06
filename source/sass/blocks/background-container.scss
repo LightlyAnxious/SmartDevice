@@ -5,44 +5,20 @@
     background-size: auto;
   }
 
-  // &--blue {
-  //   background-image: url("../img/form_bg.svg"), url("../img/form_triangles.svg"), url("../img/paper_airplane.png");
-  //   background-repeat: no-repeat, no-repeat, no-repeat;
-  //   background-position: 1578px 42px, top 94px right 1115px, right 1059px top 161px;
-  //   background-size: auto, auto, 511px 288px;
-  //   background-color: $blue-color;
-  // }
-}
-
-.no-webp .background-container--blue {
-  background-image: url("../img/form_bg.svg"), url("../img/form_triangles.svg"), url("../img/paper_airplane.png");
-  background-repeat: no-repeat, no-repeat, no-repeat;
-  background-position: 1578px 42px, top 94px right 1115px, right 1059px top 161px;
-  background-size: auto, auto, 511px 288px;
-  background-color: $blue-color;
-}
-
-.webp .background-container--blue {
-  background-image: url("../img/form_bg.svg"), url("../img/form_triangles.svg"), url("../img/paper_airplane.webp");
-  background-repeat: no-repeat, no-repeat, no-repeat;
-  background-position: 1578px 42px, top 94px right 1115px, right 1059px top 161px;
-  background-size: auto, auto, 511px 288px;
-  background-color: $blue-color;
-}
-
-@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-  .no-webp .background-container--blue {
-    background-image: url("../img/form_bg.svg"), url("../img/form_triangles.svg"), url("../img/paper_airplane_2x.png");
+  &--blue {
+    background-image: url("../img/form_bg.svg"), url("../img/form_triangles.svg"), url("../img/paper_airplane.png");
     background-repeat: no-repeat, no-repeat, no-repeat;
-    background-position: 1578px 42px, top 94px right 1115px, right 1059px top 161px;
+    background-position: 100% 42px, top 94px right 1115px, right 1059px top 161px;
     background-size: auto, auto, 511px 288px;
     background-color: $blue-color;
   }
+}
 
-  .webp .background-container--blue {
-    background-image: url("../img/form_bg.svg"), url("../img/form_triangles.svg"), url("../img/paper_airplane_2x.webp");
+@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+  .background-container--blue {
+    background-image: url("../img/form_bg.svg"), url("../img/form_triangles.svg"), url("../img/paper_airplane_2x.png");
     background-repeat: no-repeat, no-repeat, no-repeat;
-    background-position: 1578px 42px, top 94px right 1115px, right 1059px top 161px;
+    background-position: 100% 42px, top 94px right 1115px, right 1059px top 161px;
     background-size: auto, auto, 511px 288px;
     background-color: $blue-color;
   }
