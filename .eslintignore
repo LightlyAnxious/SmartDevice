@@ -1,2 +1,3 @@
-source/js/lib/
+js/lib/
+js/vendor.js
 package-lock.json

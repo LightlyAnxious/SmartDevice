@@ -31,12 +31,6 @@
     [].forEach.call(collection, callback);
   };
 
-  var hideAll = function (el) {
-    el.classList.remove('accordion__toggle--active');
-
-    return el;
-  };
-
   if (forms) {
     var names = document.querySelectorAll('[name=name]');
     var phones = document.querySelectorAll('[name=tel]');
@@ -122,13 +116,12 @@
   // Пререключение классов аккордеона
 
   for (j = 0; j < accToggles.length; j++) {
-    var last;
 
     if ((accToggles && accMenu) && (accToggles.length === accMenu.length)) {
       accToggles[j].addEventListener('click', function () {
         getCollectionForEach(accToggles, function (el) {
-          el.classList.toggle('accordion__toggle--active', false)
-          el.classList.toggle('accordion__toggle--show', false)
+          el.classList.toggle('accordion__toggle--active', false);
+          el.classList.toggle('accordion__toggle--show', false);
         });
 
         this.classList.toggle('accordion__toggle--active');
@@ -136,34 +129,4 @@
       });
     }
   }
-
-  var mask = function () {
-    jQuery(function ($) {
-      $("#tel").mask("+7(999) 999-9999");
-    });
-  };
-
-  // Маска для поля ввода телефона
-
-  jQuery(function ($) {
-    $(phones).mask("+7(999) 999-9999");
-  });
-
-  // Плагин для плавного скролла
-
-  function scrollTo(element, to, duration) {
-    if (duration <= 0) return;
-    var difference = to - element.scrollTop;
-    var perTick = difference / duration * 10;
-
-    setTimeout(function () {
-      element.scrollTop = element.scrollTop + perTick;
-      if (element.scrollTop === to) return;
-      scrollTo(element, to, duration - 10);
-    }, 10);
-  }
-
-  var scroll = new SmoothScroll('a[href*="#"]', {
-    speed: 300
-  });
 })();

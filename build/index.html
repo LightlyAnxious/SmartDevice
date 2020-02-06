@@ -8,10 +8,10 @@
   <title>Smart Device</title>
   <script src="js/lib/modernizr-custom.js"></script>
   <link rel="stylesheet preload" href="css/style.min.css" as="style">
-  <link rel="preload" href="fonts/roboto-condensed-regular.woff2" as="font">
-  <link rel="preload" href="fonts/roboto-condensed-regular.woff" as="font">
-  <link rel="preload" href="fonts/pt-mono.woff2" as="font">
-  <link rel="preload" href="fonts/pt-mono.woff" as="font">
+  <link rel="preload" href="fonts/roboto-condensed-regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/roboto-condensed-regular.woff" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/pt-mono.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/pt-mono.woff" as="font" crossorigin="anonymous">
 </head>
 <body>
   <header class="page-header">
@@ -43,7 +43,7 @@
         <p>Производство и монтаж, поставка комплектующих, блоков и модулей</p>
         <a class="page-header__consultation-link page-header__consultation-link--desktop" href="#contact-form" aria-label="получить бесплатную консультацию">Получить бесплатную консультацию</a>
         <a class="page-header__consultation-link page-header__consultation-link--mobile" href="#contact-form" aria-label="получить бесплатную консультацию">Бесплатная консультация</a>
-        <a class="page-header__scroll" href="#advantages" aria-label="скролл вниз">Скролл вниз</a>
+        <a id="scroll-btn" class="page-header__scroll" href="#advantages" aria-label="скролл вниз">Скролл вниз</a>
       </section>
     </div>
   </header>
@@ -260,10 +260,7 @@
     </div>
     <div class="modal__layout"></div>
   </section>
-  <script src="js/lib/jquery-3.4.1.slim.min.js" defer=""></script>
-  <script src="js/lib/svgxuse.min.js" defer=""></script>
-  <script src="js/lib/jquery.maskedinput.min.js" defer=""></script>
-  <script src="js/lib/smooth-scroll.polyfills.min.js" defer=""></script>
-  <script src="js/main.min.js" defer=""></script>
+  <script src="js/main.js" defer=""></script>
+  <script src="js/vendor.js" defer=""></script>
 </body>
 </html>
