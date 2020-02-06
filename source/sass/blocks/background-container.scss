@@ -4,20 +4,12 @@
     background-position: 0 0;
     background-size: auto;
   }
-
-  // &--blue {
-  //   background-image: url("../img/form_bg.svg"), url("../img/form_triangles.svg"), url("../img/paper_airplane.png");
-  //   background-repeat: no-repeat, no-repeat, no-repeat;
-  //   background-position: 1578px 42px, top 94px right 1115px, right 1059px top 161px;
-  //   background-size: auto, auto, 511px 288px;
-  //   background-color: $blue-color;
-  // }
 }
 
 .no-webp .background-container--blue {
   background-image: url("../img/form_bg.svg"), url("../img/form_triangles.svg"), url("../img/paper_airplane.png");
   background-repeat: no-repeat, no-repeat, no-repeat;
-  background-position: 1578px 42px, top 94px right 1115px, right 1059px top 161px;
+  background-position: 100% 42px, top 94px right 1115px, right 1059px top 161px;
   background-size: auto, auto, 511px 288px;
   background-color: $blue-color;
 }
@@ -25,7 +17,7 @@
 .webp .background-container--blue {
   background-image: url("../img/form_bg.svg"), url("../img/form_triangles.svg"), url("../img/paper_airplane.webp");
   background-repeat: no-repeat, no-repeat, no-repeat;
-  background-position: 1578px 42px, top 94px right 1115px, right 1059px top 161px;
+  background-position: 100% 42px, top 94px right 1115px, right 1059px top 161px;
   background-size: auto, auto, 511px 288px;
   background-color: $blue-color;
 }
@@ -34,7 +26,7 @@
   .no-webp .background-container--blue {
     background-image: url("../img/form_bg.svg"), url("../img/form_triangles.svg"), url("../img/paper_airplane_2x.png");
     background-repeat: no-repeat, no-repeat, no-repeat;
-    background-position: 1578px 42px, top 94px right 1115px, right 1059px top 161px;
+    background-position: 100% 42px, top 94px right 1115px, right 1059px top 161px;
     background-size: auto, auto, 511px 288px;
     background-color: $blue-color;
   }
@@ -42,9 +34,53 @@
   .webp .background-container--blue {
     background-image: url("../img/form_bg.svg"), url("../img/form_triangles.svg"), url("../img/paper_airplane_2x.webp");
     background-repeat: no-repeat, no-repeat, no-repeat;
-    background-position: 1578px 42px, top 94px right 1115px, right 1059px top 161px;
+    background-position: 100% 42px, top 94px right 1115px, right 1059px top 161px;
     background-size: auto, auto, 511px 288px;
     background-color: $blue-color;
+  }
+}
+
+@media (max-width: 1550px) {
+  .no-webp .background-container--blue {
+    background-position: 100% 42px, top 94px right 865px, right 910px top 161px;
+  }
+
+  .webp .background-container--blue {
+    background-position: 100% 42px, top 94px right 865px, right 910px top 161px;
+  }
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    .no-webp .background-container--blue {
+      background-position: 100% 42px, top 94px right 865px, right 910px top 161px;
+    }
+
+    .webp .background-container--blue {
+      background-position: 100% 42px, top 94px right 865px, right 910px top 161px;
+    }
+  }
+}
+
+@media (max-width: 1300px) {
+  .no-webp .background-container--blue {
+    background-position: 100% 42px, top 94px right 810px, right 840px top 161px;
+    background-size: auto, auto, 346px 195px;
+  }
+
+  .webp .background-container--blue {
+    background-position: 100% 42px, top 94px right 810px, right 840px top 161px;
+    background-size: auto, auto, 346px 195px;
+  }
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    .no-webp .background-container--blue {
+      background-position: 100% 42px, top 94px right 810px, right 840px top 161px;
+      background-size: auto, auto, 346px 195px;
+    }
+
+    .webp .background-container--blue {
+      background-position: 100% 42px, top 94px right 810px, right 840px top 161px;
+      background-size: auto, auto, 346px 195px;
+    }
   }
 }
 
@@ -55,10 +91,13 @@
       background-position: 0 0;
       background-size: auto;
     }
+  }
 
-    &--blue {
-      background-image: unset;
-      background-color: $blue-color;
-    }
+  .webp .background-container--blue {
+    background-image: unset;
+  }
+
+  .no-webp .background-container--blue {
+    background-image: unset;
   }
 }

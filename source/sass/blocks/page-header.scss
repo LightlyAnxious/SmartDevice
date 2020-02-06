@@ -1,17 +1,19 @@
+.page-header {
+  flex-shrink: 0;
+}
+
 .webp .page-header {
   background-image: url("../img/banner_bg.webp"), url("../img/banner_triangles.svg"), url("../img/board.webp");
   background-repeat: no-repeat, no-repeat, no-repeat;
-  background-position: 0 0, 50% 0, 1038px 71%;
+  background-position: 0 0, 0 0, 1038px 71%;
   background-size: cover, auto, 705px 515px;
   background-color: $dark-navy-color;
 }
 
 .no-webp .page-header {
-  flex-shrink: 0;
-
   background-image: url("../img/banner_bg.png"), url("../img/banner_triangles.svg"), url("../img/board.png");
   background-repeat: no-repeat, no-repeat, no-repeat;
-  background-position: 0 0, 50% 0, 1038px 71%;
+  background-position: 0 0, 0 0, 1038px 71%;
   background-size: cover, auto, 705px 515px;
   background-color: $dark-navy-color;
 }
@@ -20,7 +22,7 @@
   .no-webp .page-header {
     background-image: url("../img/banner_bg_2x.png"), url("../img/banner_triangles.svg"), url("../img/board_2x.png");
     background-repeat: no-repeat, no-repeat, no-repeat;
-    background-position: 0 0, 50% 0, 1038px 71%;
+    background-position: 0 0, 0 0, 1038px 71%;
     background-size: cover, auto, 705px 515px;
     background-color: $dark-navy-color;
   }
@@ -28,9 +30,29 @@
   .webp .page-header {
     background-image: url("../img/banner_bg_2x.webp"), url("../img/banner_triangles.svg"), url("../img/board_2x.webp");
     background-repeat: no-repeat, no-repeat, no-repeat;
-    background-position: 0 0, 50% 0, 1038px 71%;
+    background-position: 0 0, 0 0, 1038px 71%;
     background-size: cover, auto, 705px 515px;
     background-color: $dark-navy-color;
+  }
+}
+
+@media (max-width: 1500px) {
+  .webp .page-header {
+    background-position: 0 0, -300px 0, 738px 71%;
+  }
+
+  .no-webp .page-header {
+    background-position: 0 0, -300px 0, 738px 71%;
+  }
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    .webp .page-header {
+      background-position: 0 0, -300px 0, 738px 71%;
+    }
+
+    .no-webp .page-header {
+      background-position: 0 0, -300px 0, 738px 71%;
+    }
   }
 }
 
@@ -113,6 +135,10 @@
 
     opacity: 0.5;
   }
+
+  &:focus {
+    outline: 5px solid #4d90fe;
+  }
 }
 
 .page-header__scroll {
@@ -138,6 +164,10 @@
 
   &:active {
     color: rgba(1, 178, 255, 0.3);
+  }
+
+  &:focus {
+    outline: 5px solid #4d90fe;
   }
 }
 

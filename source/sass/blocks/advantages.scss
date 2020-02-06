@@ -55,6 +55,10 @@
     background-color: $blue-color;
   }
 
+  &:focus {
+    outline: 5px solid #4d90fe;
+  }
+
   &:hover .advantages__image {
     fill: #ffffff;
   }

@@ -57,6 +57,10 @@
 
       opacity: 0.5;
     }
+
+    &:focus {
+      outline: 5px solid #4d90fe;
+    }
   }
 }
 

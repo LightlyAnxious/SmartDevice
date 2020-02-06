@@ -26,6 +26,10 @@
       fill-opacity: 0.5;
     }
 
+    &:focus {
+      outline: 5px solid #4d90fe;
+    }
+
     &:last-of-type {
       margin-right: 0;
     }
@@ -98,6 +102,10 @@
   &:active {
     fill: rgba(1, 178, 255, 0.3);
   }
+
+  &:focus {
+    outline: 5px solid #4d90fe;
+  }
 }
 
 .main-nav__callback {
@@ -124,6 +132,10 @@
     border: 1px solid $blue-color;
 
     opacity: 0.5;
+  }
+
+  &:focus {
+    outline: 5px solid #4d90fe;
   }
 }
 

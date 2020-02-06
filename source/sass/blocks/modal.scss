@@ -85,6 +85,12 @@
     }
   }
 
+  & input[type="checkbox"] {
+    z-index: 10;
+    bottom: 10%;
+    left: 10%;
+  }
+
   & textarea {
     width: 411px;
     border: none;
@@ -93,6 +99,8 @@
     margin-bottom: 30px;
     padding: 13px 24px;
     box-sizing: border-box;
+
+    color: #ffffff;
 
     background-color: #19baff;
 
