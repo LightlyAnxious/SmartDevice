@@ -5,7 +5,7 @@
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.x",
     "autoprefixer": "9.5.x",
-    "browser-sync": "2.26.x",
+    "browser-sync": "2.27.x",
     "eslint": "4.16.0",
     "eslint-config-htmlacademy": "0.4.x",
     "gulp": "4.0.x",
